@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Webanwendung zur Ausflugsplanung</h1>
+        <hr></hr>
+        <h:form>
+            <label>Tag:</label>
+            <h:selectOneMenu value="#{controller.week}">
+                <f:selectItem itemValue = "1" itemLabel = "Wochentag" />
+                <f:selectItem itemValue = "2" itemLabel = "Wochenende" />
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            
+            <label>Wetter:</label>
+            <h:selectOneMenu value="#{controller.weather}">
+                <f:selectItem itemValue = "1" itemLabel = "Schönes Wetter" />
+                <f:selectItem itemValue = "2" itemLabel = "Regenwetter" />
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            
+            <label>Zeit:</label>
+            <h:selectOneMenu value="#{controller.school}">
+                <f:selectItem itemValue = "1" itemLabel = "Schulferien" />
+                <f:selectItem itemValue = "2" itemLabel = "Schule" />
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            
+            <label>Uhrzeit:</label>
+            <h:selectOneMenu value="#{controller.time}">
+                <f:selectItem itemValue = "1" itemLabel = "Tagsüber" />
+                <f:selectItem itemValue = "2" itemLabel = "Abend" />
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            
+            <label>Kinder:</label>
+            <h:selectOneMenu value="#{controller.child}">
+                <f:selectItem itemValue = "1" itemLabel = "Mit Kindern" />
+                <f:selectItem itemValue = "2" itemLabel = "ohne Kinder" />
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            
+            <h:commandButton id="button" value="Aussuchen" action="#{controller.check}"/>
+        </h:form>
+    </h:body>
+</html>
+
